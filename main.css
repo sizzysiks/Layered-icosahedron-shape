@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: black;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.webgl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: -1;
+}
+.buttons-wrapper {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50% , -5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.controls-btn {
+    border: 1px solid white;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 1em;
+    cursor: pointer;
+}
+.controls-btn:hover {
+    background: rgba(0, 0, 0, 0.288);
+}
+
+/* Points */
+.points {
+    position: absolute;
+    top:50%;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.points:hover .points-text {
+    opacity: 1;
+}
+.points-label {
+    border: 1px solid rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.288);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.points-text {
+    pointer-events: none;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.288);
+    color: white;
+    font-size: 0.8rem;
+    padding: 1em;
+    opacity: 0;
+    transition: opacity 0.2s;
+    will-change: opacity;
+}
+.point-1 {
+    transform: translate(-150px , 40px);
+}
+.point-2 {
+    transform: translate(-100px , -180px);
+}
+
+/* Messages */
+.controls-message {
+    pointer-events: none;
+    position: absolute;
+    top:1%;
+    left:50%;
+    transform:translate(-50%,-1%) scale(0);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.2s;
+    will-change: transform;
+}
+.controls-message-show {
+    transform:translate(-50%,-1%) scale(1);
+}
+
+/*# sourceMappingURL=main.css.map*/
